@@ -1,0 +1,17 @@
+# Ignorar todo por defecto
+*
+
+# Permitir recorrer las carpetas del proyecto
+!*/
+
+# Archivos permitidos
+!*.py
+!*.md
+!*.ipynb
+
+# Mantener el archivo de configuración del repositorio
+!.gitignore
+
+# Carpetas excluidas explícitamente
+carpetas comprimidas/
+.vscode/
