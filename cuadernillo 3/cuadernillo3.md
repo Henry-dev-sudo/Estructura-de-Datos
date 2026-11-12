@@ -2,76 +2,71 @@
 
 Este cuadernillo reúne ejercicios de programación en Python y estructuras de datos. Los ejemplos trabajan funciones, estructuras de control, pilas, colas, nodos y árboles binarios mediante programas independientes y pequeños sistemas interactivos.
 
-## Cambios realizados
+**Lenguaje:** Python 3.x · **Modalidad:** individual
 
-- Se reorganizaron los archivos de las clases para separar cada tema en carpetas más descriptivas.
-- Los ejemplos de funciones y pilas que estaban agrupados en la clase 16 ahora se encuentran en `clase15`, dentro de las carpetas `Funciones` y `Pilas-funciones con Pila`.
-- Los ejercicios de condicionales y ciclos ahora están agrupados en `clase 17/Bucles`.
-- Los ejercicios de colas se concentraron en `clase 17/Implementación de colas(FIFO)`.
-- Se agregaron ejercicios de nodos en `clase18`, árboles binarios en `clase19` y una tarea independiente en `Tareas`.
-- Se actualizaron los enlaces de este documento para apuntar a las nuevas ubicaciones de los archivos.
+## Cómo ejecutar el código
+
+1. Instala Python 3.x y abre una terminal en la carpeta del proyecto.
+2. Ejecuta cualquier archivo con `python ruta/al/archivo.py`. Ejemplo: `python "Clases/clase15/Pilas-funciones con Pila/funcionesPila.py"`.
+3. Los archivos `sistema-de-un-banco.py` y `Sistema-Aceleracion-Desaseleración.py` son interactivos: piden datos por teclado.
+4. `funciones.py` y `pilas.py` contienen ejemplos comentados: para ver su salida hay que quitar el `#` de las líneas que se quieran probar.
+5. Los demás archivos imprimen su resultado directamente.
 
 ## Estructura de carpetas
 
-### Clases
-
-Los ejemplos están organizados por número de clase y, cuando corresponde, por tema:
-
-- `clase15/Funciones`: funciones básicas.
-- `clase15/Pilas-funciones con Pila`: implementación de pilas con listas y funciones.
-- `clase 17/Bucles`: estructuras condicionales y ciclos.
-- `clase 17/Implementación de colas(FIFO)`: implementación de colas y un sistema de turnos.
-- `clase18`: creación y uso de nodos.
-- `clase19`: árboles binarios y recorridos recursivos.
-
-### Tareas
-
-La carpeta `Tareas` contiene ejercicios prácticos independientes de las clases, como el sistema de aceleración y desaceleración de un vehículo.
+```
+Clases/
+├── clase15/
+│   ├── Funciones/funciones.py
+│   └── Pilas-funciones con Pila/  (pilas.py, funcionesPila.py)
+├── clase 17/
+│   ├── Bucles/                    (if.py, Elif.py, for.py, while.py)
+│   └── Implementación de colas(FIFO)/  (cola.py, Operaciones-de-cola.py, sistema-de-un-banco.py)
+├── clase18/nodos.py
+├── clase19/ArbolesBinarios.py
+└── clase 20/OpArbolesBn.py
+Tareas/Sistema-Aceleracion-Desaseleración.py
+```
 
 ## Temas trabajados
 
-### Clase 15: funciones y pilas
+### Clase 15: funciones y pilas (LIFO)
 
-#### Funciones
+- [funciones.py](Clases/clase15/Funciones/funciones.py): tres ejercicios sobre funciones, dejados como comentarios: saludar sin parámetros, sumar dos números con `return` y saludar a dos nombres ingresados por teclado.
+- [pilas.py](<Clases/clase15/Pilas-funciones con Pila/pilas.py>): creación de una pila vacía con una lista. Incluye, comentado, un ejemplo de agregado de los elementos A, B, C, D y E con `append()`.
+- [funcionesPila.py](<Clases/clase15/Pilas-funciones con Pila/funcionesPila.py>): operaciones `push` y `pop` como funciones. Agrega A, B y C a la pila, la muestra y retira el último elemento (C).
 
-- [funciones.py](Clases/clase15/Funciones/funciones.py): definición de funciones, parámetros, valores de retorno y funciones para saludar o sumar.
+En una pila el último elemento agregado es el primero en retirarse (Last In, First Out).
 
-#### Pilas
-
-- [pilas.py](<Clases/clase15/Pilas-funciones con Pila/pilas.py>): representación de una pila mediante una lista y uso de `append()` para agregar elementos.
-- [funcionesPila.py](<Clases/clase15/Pilas-funciones con Pila/funcionesPila.py>): creación de las operaciones `push` y `pop` para agregar y retirar elementos siguiendo el principio LIFO.
-
-La separación de estos archivos permite distinguir la creación de una pila de las funciones que controlan sus operaciones. La lista se utiliza como almacenamiento y el último elemento agregado es el primero en retirarse.
-
-### Clase 17: estructuras de control y colas
+### Clase 17: estructuras de control y colas (FIFO)
 
 #### Bucles y condicionales
 
-- [if.py](<Clases/clase 17/Bucles/if.py>): toma de decisiones con `if` y `else`.
-- [Elif.py](<Clases/clase 17/Bucles/Elif.py>): evaluación de varias condiciones con `if`, `elif` y `else`.
-- [for.py](<Clases/clase 17/Bucles/for.py>): repetición de instrucciones con el ciclo `for` y `range()`.
-- [while.py](<Clases/clase 17/Bucles/while.py>): repetición controlada con el ciclo `while`.
+- [if.py](<Clases/clase 17/Bucles/if.py>): decisión con `if` y `else` para saber si una persona es mayor o menor de edad.
+- [Elif.py](<Clases/clase 17/Bucles/Elif.py>): clasificación de una nota con `if`, `elif` y `else` (Excelente, Aprobado, insuficiencia o Reprobado).
+- [for.py](<Clases/clase 17/Bucles/for.py>): repetición con `for` y `range()`; incluye, comentado, el recorrido de una lista de clientes.
+- [while.py](<Clases/clase 17/Bucles/while.py>): repetición controlada con `while`, contando del 1 al 5.
 
-#### Colas FIFO
+#### Colas
 
-- [cola.py](<Clases/clase 17/Implementación de colas(FIFO)/cola.py>): creación de una cola con listas y agregación de elementos.
-- [Operaciones-de-cola.py](<Clases/clase 17/Implementación de colas(FIFO)/Operaciones-de-cola.py>): operaciones `enqueue`, `peek`, `size`, `dequeue`, `rear` e identificación de una cola vacía.
-- [sistema-de-un-banco.py](<Clases/clase 17/Implementación de colas(FIFO)/sistema-de-un-banco.py>): sistema de turnos bancarios con registro de clientes, consulta del siguiente turno, atención y visualización de la cola.
+- [cola.py](<Clases/clase 17/Implementación de colas(FIFO)/cola.py>): creación de una cola con una lista, agregado de tres nombres con `append()` y muestra de la cola.
+- [Operaciones-de-cola.py](<Clases/clase 17/Implementación de colas(FIFO)/Operaciones-de-cola.py>): ejemplo de la tienda Rosita con las operaciones `enqueue` (`append`), `peek`, `size` (`len`), `dequeue` (`pop(0)`), `rear` e `is empty`.
+- [sistema-de-un-banco.py](<Clases/clase 17/Implementación de colas(FIFO)/sistema-de-un-banco.py>): sistema de turnos del "Banco de Manguitos" con menú: registrar cliente (turno con formato `T001`, `T002`...), ver siguiente, llamar al cliente, mostrar todos los clientes y salir.
 
-En estos ejercicios se muestra la diferencia entre agregar un elemento al final de una cola y retirar el elemento del frente. El sistema bancario aplica FIFO para atender a los clientes en el mismo orden en que llegan.
+En una cola se agrega al final y se retira del frente (First In, First Out). El banco atiende en el orden de llegada.
 
 ### Clase 18: nodos
 
-- [nodos.py](Clases/clase18/nodos.py): definición de la clase `Nodo` con un valor y referencias izquierda y derecha. El archivo construye un árbol genealógico, un menú de decisiones y una jerarquía de carpetas; además incluye recorridos en preorden y postorden, conteo de nodos, conteo de hojas y búsqueda de valores.
+- [nodos.py](Clases/clase18/nodos.py): clase `Nodo` con valor y referencias izquierda y derecha. Construye un árbol de 10 nodos numéricos y aplica recorrido en **preorden**, conteo recursivo de nodos y cálculo de la **altura**.
 
 ### Clase 19: árboles binarios
 
-- [ArbolesBinarios.py](Clases/clase19/ArbolesBinarios.py): construcción de un árbol binario con diez nodos numéricos, relaciones izquierda-derecha, recorrido en preorden, conteo recursivo de nodos y cálculo de la altura.
+- [ArbolesBinarios.py](Clases/clase19/ArbolesBinarios.py): caso práctico del catálogo de e-commerce "NovaMart". Árbol con la raíz `Producto`, las categorías `Tecnologia` y `Hogar`, y las subcategorías `Laptops`, `Celulares`, `Cocina` y `Muebles`. Incluye la función `es_hoja()` para saber si un nodo no tiene hijos.
 
-También se incorporan comprobaciones para identificar si un nodo es hoja, es decir, si no tiene hijos. Estas comprobaciones se aplican a un catálogo de productos con las categorías `Tecnologia`, `Hogar`, `Laptops`, `Celulares`, `Cocina` y `Muebles`.
+### Clase 20: árbol binario de búsqueda (BST)
+
+- [OpArbolesBn.py](<Clases/clase 20/OpArbolesBn.py>): **árbol binario de búsqueda (BST)** para un inventario de productos (código, nombre, cantidad). Implementa `agregar` (sin duplicados), `buscar`, `actualizar`, `eliminar` (sin hijos, un hijo y dos hijos con sucesor) y recorrido **inorden**, que muestra los códigos ordenados.
 
 ## Tareas
 
-- [Sistema-Aceleracion-Desaseleración.py](Tareas/Sistema-Aceleracion-Desaseleración.py): uso de las funciones `acelerar()` y `desacelerar()` para aumentar o disminuir la velocidad de un vehículo en 10 km/h.
-
-La tarea solicita una velocidad inicial, aplica la función `acelerar()` para incrementarla en 10 km/h y después utiliza `desacelerar()` para reducirla en 10 km/h, mostrando ambos resultados.
+- [Sistema-Aceleracion-Desaseleración.py](Tareas/Sistema-Aceleracion-Desaseleración.py): pide una velocidad inicial (si es negativa la toma como 0), usa `acelerar()` para sumar 10 km/h y `desacelerar()` para restar 10 km/h sin bajar de 0, mostrando ambos resultados.

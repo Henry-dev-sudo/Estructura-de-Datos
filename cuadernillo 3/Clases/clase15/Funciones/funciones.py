@@ -11,10 +11,10 @@
 # print(resultado)
 
 # Ejercicio 3
-# def saludar(nombre):
-#     print("Hola", nombre)
-# nombre1= input("Ingrese el primer nombre: ")
-# nombre2= input("Ingrese el segundo nombre: ")
+def saludar(nombre):
+    print("Hola", nombre)
+nombre1= input("Ingrese el primer nombre: ")
+nombre2= input("Ingrese el segundo nombre: ")
 
-# saludar(nombre1)
-# saludar(nombre2)
+saludar(nombre1)
+saludar(nombre2)
